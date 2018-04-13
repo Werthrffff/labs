@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<script>
+			var age = prompt("Введите Возраст","14");
+			function checkAge(age) {
+				r = (age > 18) ? true:confirm('Родители разрешили?') 
+				return r
+			}
+			if (checkAge(age)==true) alert('работает');
+		</script>
+				<script>
+			var age = prompt("Введите Возраст","14");
+			function checkAge(age) {
+				if ((age > 18) || confirm('Родители разрешили?'))
+				return true;
+			}
+			if (checkAge(age)==true) alert('работает');
+		</script>
+	</head>
+</html>

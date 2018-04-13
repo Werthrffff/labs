@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script>
+			function sumToN(n) {
+				var ans = 0;
+				while(n>0)
+					{
+						ans = ans * 1 + n*1;
+						n--;
+					}
+				return ans;
+			}
+			a = prompt("Первое число","100");
+			//b = prompt("Второе число","100");
+			alert(sumToN(a));
+		</script>
+				<script>
+			function sumToN(n) {
+				ans = 0;
+				if (n>0) 
+				ans = n*1 + sumToN(n-1);
+				return ans;
+			}
+			a = prompt("Первое число","100");
+			//b = prompt("Второе число","100");
+			alert(sumToN(a));
+		</script>
+				<script>
+				function sumToN(n) {
+				var ans = (n*1+1)*n/2;
+
+				return ans;
+			}
+			a = prompt("Первое число","100");
+			//b = prompt("Второе число","100");
+			alert(sumToN(a));
+		</script>
+	</head>
+</html>
