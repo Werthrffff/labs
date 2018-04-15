@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<script>
+			function Calculator() {
+			this.n1=0;
+			this.n2=0;
+			this.z="0";
+			
+				var methods = {
+						"-": function(a, b) {
+						return a - b;
+					},
+						"+": function(a, b) {
+						return a + b;
+					}
+				};
+			
+
+			
+				this.calculate = function(str){
+					var split = str.split(' '),
+					a = +split[0],
+					c = split[1],
+					b = +split[2]
+					return methods[c](a, b);
+					//if (z == '*') return n1*n2;
+				};
+			
+					this.addMethod = function(str,f){
+					methods[str] = f;
+				};
+				
+				this.read = function() {
+						n1 = prompt("Первое число","14");
+						n2 = prompt("Второе число","14");
+				},
+		
+				this.sum = function() {
+				 	return +n1+n2;
+				},
+			
+				this.mul = function() {
+				 	return +n1*+n2;
+				}
+			}
+			var calc = new Calculator;
+
+			alert( calc.calculate("3 + 7") ); // 10
+			
+			var powerCalc = new Calculator;
+			powerCalc.addMethod("*", function(a, b) {
+			return a * b;
+			});
+				powerCalc.addMethod("/", function(a, b) {
+				return a / b;
+			});
+				powerCalc.addMethod("**", function(a, b) {
+				return Math.pow(a, b);
+			});
+			var result = powerCalc.calculate("2 ** 4");
+			alert( result );
+		</script>
+	</head>
+</html>

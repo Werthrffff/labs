@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script>
+			var calculator = {
+				n1: 1,
+				n2: 1,
+				read: function() {
+				 	n1 = prompt("Первое число","14");
+					n2 = prompt("Второе число","14");
+				},
+				sum: function() {
+				 	return n1*1+n2*1;
+				},
+				mul: function() {
+				 	return n1*n2;
+				}
+			}
+			calculator.read();
+			alert(calculator.sum());
+			alert(calculator.mul());
+		</script>
+	</head>
+</html>

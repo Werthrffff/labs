@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script>
+			function Eratosfen(a) {
+				this.lng = a;
+				this.array = [];
+				for (var i=2;i<=a;i++) {
+					this.array.push(i);
+				}
+				this.p = 2;
+				this.locked=1;
+				this.lngArr = this.array.length;
+				while(this.p*this.p < this.lng)
+				{
+					for (var i = this.locked; i < this.lngArr; i++ )
+					{
+						if(this.array[i] % this.p == 0){
+							this.array.splice(i, 1);
+							this.lngArr--;
+						}
+					}
+					this.p = this.array[this.locked];
+					this.locked++;
+				}
+			}
+			er = new Eratosfen(100);
+			alert(er.array);
+		</script>
+	</head>
+</html>

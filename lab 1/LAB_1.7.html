@@ -1,0 +1,13 @@
+<!DOCTYPE.html>
+<html>
+	<head>
+		<script>
+			var login = prompt("Кто пришел?","Вася/Директор");
+			var message;
+			message = (login == 'Вася')? 'Привет':
+				(login == 'Директор')? "Здравствуйте":
+				(login == '')? 'Нет логина':'';
+			alert(message);
+		</script>
+	</head>
+</html>

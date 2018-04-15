@@ -1,0 +1,23 @@
+<!DOCTYPE.html>
+<html>
+	<head>
+		<script>
+			var prime = true;
+			var i = 2;
+			var ans = "";
+			while(i<=10){
+				for(var j=2;j<i;j++)
+					{ if (i%j==0)
+						{ 	prime = false;
+							break;
+						}
+					}
+				if (prime==true) ans = ans+i+",";
+				prime = true;
+				i++;
+				}
+			ans = ans.slice(0, -1);
+			alert(ans);
+		</script>
+	</head>
+</html>

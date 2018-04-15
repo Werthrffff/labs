@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script>
+			function Calculator() {
+			this.n1=0;
+			this.n2=0;
+			
+			this.read = function() {
+				 	n1 = prompt("Первое число","14");
+					n2 = prompt("Второе число","14");
+				},
+		
+			this.sum = function() {
+				 	return n1*1+n2*1;
+				},
+			
+			this.mul = function() {
+				 	return n1*n2;
+				}
+			}
+			
+			var calculator = new Calculator();
+			calculator.read();
+			alert( "Сумма=" + calculator.sum() );
+			alert( "Произведение=" + calculator.mul() )
+		</script>
+	</head>
+</html>
